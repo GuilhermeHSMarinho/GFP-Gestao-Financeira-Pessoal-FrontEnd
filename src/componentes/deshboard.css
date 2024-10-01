@@ -1,0 +1,102 @@
+body {
+    background-color: #2e2e2e;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+    width: 100%;
+    background-color: #3A7BAF;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #3b83c6; /* Fundo do cabeçalho */
+    position: relative; /* Para o posicionamento da .header-left */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #2E2E2E;
+    position: relative;
+    top: -10px;
+
+    z-index: 1;
+    height: 60px;
+    margin-bottom: -1.1%;
+}
+
+.iconprofile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+
+
+.botoes_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Espaçamento entre os botões */
+    width: 100%;
+}
+
+.botoes_menu button {
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botoes_menu button:hover {
+    background-color: #c0c0c0;
+}
+
+.iconbuttons {
+    width: 25px;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Botão de logout no canto direito */
+.logout-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.logout {
+    background-color: #d36b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #ff3333;
+}
