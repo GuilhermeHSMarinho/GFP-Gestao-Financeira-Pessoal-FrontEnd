@@ -1,0 +1,214 @@
+body {
+    background-color: #2e2e2e;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+    width: 100%;
+    background-color: #3A7BAF;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #3b83c6; /* Fundo do cabeçalho */
+    position: relative;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #438AC3;
+    height: 50px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.iconprofile {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.botoes_menu {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-left: 20px; /* Adiciona espaço entre o botão hambúrguer e os botões */
+}
+
+.botoes_menu button {
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    color: #000;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botoes_menu button:hover {
+    background-color: #c0c0c0;
+}
+
+.iconbuttons {
+    width: 25px;
+    height: auto;
+    margin-right: 8px;
+}
+
+/* Botão de logout no canto direito */
+.logout-button {
+    margin-left: 5%;
+    margin-right: 10px;
+}
+
+.logout {
+    background-color: #d36b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background-color: #ff3333;
+}
+
+.eye-icon {
+    color: #fff;
+    margin-left: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.eye-icon:hover {
+    transform: scale(1.2);
+}
+
+.hamburger-button {
+    display: flex; /* Mostra o botão em telas grandes */
+    cursor: pointer;
+}
+
+.burger-icon {
+    font-size: 24px;
+    color: #fff; /* Cor do ícone do menu */
+}
+
+.burger-menu {
+    background-color: #b3b3b3;
+    position: absolute;
+    top: 60px; /* Abaixo do cabeçalho */
+    right: 0;
+    margin-right: 10%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.burger-menu button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #000000;
+    border: none;
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.burger-menu button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo responsivo */
+@media (max-width: 1600px) {
+    .hamburger-button {
+        display: flex; /* Mostra o botão em telas menores */
+    }
+
+    .botoes_menu {
+        display: none; /* Esconde os botões em telas menores */
+    }
+}
+
+@media (min-width: 1601px) {
+    .hamburger-button {
+        display: none; /* Esconde o botão hambúrguer em telas maiores que 1601px */
+    }
+}
+
+#cssportal-grid {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+#NomeAcessoRapido {
+    grid-area: 1 / 7 / 4 / 11;
+    background-color: rgba(100,210,51, 0.5);
+}
+#NomeUsuario {
+    grid-area: 1 / 1 / 4 / 7;
+    background-color: rgba(58,148,13, 0.5);
+}
+#NomeLimitedeGastos {
+    grid-area: 1 / 11 / 9 / 13;
+    background-color: rgba(109,162,19, 0.5);
+}
+#Datas {
+    grid-area: 9 / 11 / 13 / 13;
+    background-color: rgba(157,71,188, 0.5);
+}
+#GraficoReceita {
+    grid-area: 4 / 1 / 8 / 3;
+    background-color: rgba(26,252,250, 0.5);
+}
+#GraficoDespesa {
+    grid-area: 4 / 3 / 8 / 5;
+    background-color: rgba(181,40,148, 0.5);
+}
+#DadosDeContasAPagar {
+    grid-area: 8 / 1 / 13 / 5;
+    background-color: rgba(167,74,21, 0.5);
+}
+#NomeMeusBancos {
+    grid-area: 4 / 5 / 13 / 8;
+    background-color: rgba(137,147,215, 0.5);
+}
+#NomeMeusCartoes {
+    grid-area: 4 / 8 / 13 / 11;
+    background-color: rgba(149,236,77, 0.5);
+}
+.Main {
+    padding-top: 10px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background-color: #2E2E2E;
+}
+
