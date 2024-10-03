@@ -10,8 +10,8 @@
     background: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     color: white;
-}
 
+}
 .popup-content {
     background: #434343;
     padding: 20px;
@@ -19,6 +19,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     max-width: 400px;
     width: 100%;
+
 }
 
 .color-picker {
@@ -28,66 +29,104 @@
 }
 
 .color-display {
-    width: 30px;  /* Largura do quadrado de cor */
-    height: 30px; /* Altura do quadrado de cor */
-    border: 1px solid #ccc; /* Borda para destaque */
-    border-radius: 4px; /* Borda arredondada */
-    margin-left: 10px; /* Espaçamento entre a barra e a cor */
+    width: 50px;  /* Tamanho do quadrado de cor */
+    height: 50px; /* Tamanho do quadrado de cor */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.selected-icon {
+    width: 30px;  /* Tamanho do ícone */
+    height: 30px;
+    object-fit: contain;
+    position: absolute;
 }
 
 .icon-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    grid-template-rows: repeat(3, 1fr); /* 3 linhas visíveis */
     gap: 10px;
+    max-height: 145px; /* Altura do contêiner para 3 linhas de ícones */
+    overflow-y: scroll; /* Habilita a rolagem vertical */
+    padding: 10px; /* Espaço interno para os ícones */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #3B3B3B;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .icon-item {
+    width: 40px;  /* Tamanho do quadrado de ícone */
+    height: 40px; /* Tamanho do quadrado de ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #ccc;
 }
 
-.icon-item img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.2s;
+.icon-item:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
 }
 
-.icon-item:hover img {
-    transform: scale(1.1);
+.icon-item svg {
+    font-size: 20px; /* Tamanho do ícone ajustável */
+    color: #ffffff;
 }
 
-.gradient-bar {
-    width: 100%;
-    height: 20px; /* Altura da barra */
-    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet); /* Gradiente completo */
-    border-radius: 10px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor de ponteiro para indicar que é clicável */
+/* Estilo para quando o ícone for selecionado */
+.icon-item.selected {
+    border: 2px solid #007BFF; /* Borda azul para destacar o ícone selecionado */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4); /* Sombra destacada para dar o efeito de sobressair */
+    transform: scale(1.1); /* Aumenta o ícone levemente */
 }
 
-.input-group {
-    margin-bottom: 1rem;
-    text-align: left;
+.cancel-btn {
+    background-color: #f56565; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #dddddd;
+.cancel-btn:hover {
+    background-color: #e53e3e; /* Vermelho mais escuro */
 }
 
-.input-group input {
-    width: 70%;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #c5c5c5;
-    background: #B3B3B3;
-    border-radius: 0 5px 0 5px;
+.submit-btn {
+    background-color: #48bb78; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.color-display {
-    width: 30px;  /* Largura do quadrado de cor */
-    height: 30px; /* Altura do quadrado de cor */
-    border: 1px solid #ccc; /* Borda para destaque */
-    border-radius: 4px; /* Borda arredondada */
-    margin-left: 10px; /* Espaçamento entre a barra e a cor */
-    transition: background-color 0.3s ease; /* Transição suave */
+.submit-btn:hover {
+    background-color: #38a169; /* Verde mais escuro */
 }
+
+button {
+    margin-right: 10px; /* Espaçamento entre os botões */
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Espaça os botões para as extremidades */
+    margin-top: 20px; /* Espaço acima dos botões */
+}
+
