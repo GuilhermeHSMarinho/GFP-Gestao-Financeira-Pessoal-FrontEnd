@@ -6,7 +6,7 @@ import {
     faThumbsUp,
     faThumbsDown,
     faSpinner
-} from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons' ;
 
 // Dados para auto completar
 const corretoras = ['Corretora A', 'Corretora B', 'Corretora C'].sort();
