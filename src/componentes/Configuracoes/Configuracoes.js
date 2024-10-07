@@ -1,56 +1,77 @@
 import React, { useState } from 'react';
-import './Configuracoes.css'; // Estilo do componente
+import Header from '../Header';
+import './Configuracoes.css';
+import CategoriaGF from '../Popup/CategoriaGestaoFinanceira/CategoriaGestaoFinanceira';
 
 const Configuracoes = () => {
-    const [theme, setTheme] = useState('light');
-    const [language, setLanguage] = useState('pt');
-    const [notificationsEnabled, setNotificationsEnabled] = useState(true);
+    const [activeDiv, setActiveDiv] = useState(''); // Estado para controlar qual div deve ser exibida
 
-    const handleThemeChange = (event) => {
-        setTheme(event.target.value);
+    const [isCategoriaGFOpen, setCategoriaGFOpen] = useState(false);
+
+    const openCategoriaGF = () => setCategoriaGFOpen(true);
+    const closeCategoriaGF = () => setCategoriaGFOpen(false);
+
+    const CategoriaDiv = () => {
+        return <div>
+            <div id="cssportal-grid-3">
+                <div id="Gerenciamento-de-Categorias">Gerenciamento-de-Categorias</div>
+                <div id="botao">
+                    <button type="button" onClick={openCategoriaGF}>
+                        teste
+                    </button>
+                    <CategoriaGF isOpen={isCategoriaGFOpen} onClose={closeCategoriaGF}/>
+                </div>
+                <div id="total">total</div>
+                <div id="conteudo">conteudo</div>
+            </div>
+
+        </div>;
     };
 
-    const handleLanguageChange = (event) => {
-        setLanguage(event.target.value);
+    const BancosDiv = () => {
+        return <div>Bancos: Aqui você pode configurar os bancos.</div>;
     };
 
-    const handleNotificationToggle = () => {
-        setNotificationsEnabled(!notificationsEnabled);
+    const CartoesDiv = () => {
+        return <div>Cartões: Aqui você pode configurar os cartões.</div>;
     };
 
-    const handleSave = () => {
-        // Aqui você pode adicionar a lógica para salvar as configurações
-        console.log('Configurações salvas:', { theme, language, notificationsEnabled });
+    const renderActiveDiv = () => {
+        switch (activeDiv) {
+            case 'categorias':
+                return <CategoriaDiv />;
+            case 'bancos':
+                return <BancosDiv />;
+            case 'cartoes':
+                return <CartoesDiv />;
+            default:
+                return <div>Selecione uma opção acima para configurar.</div>; // Mensagem padrão
+        }
     };
 
     return (
-        <div className="configuracoes">
-            <h2>Configurações</h2>
-            <div className="configuracao">
-                <label htmlFor="theme">Tema:</label>
-                <select id="theme" value={theme} onChange={handleThemeChange}>
-                    <option value="light">Claro</option>
-                    <option value="dark">Escuro</option>
-                </select>
-            </div>
-            <div className="configuracao">
-                <label htmlFor="language">Idioma:</label>
-                <select id="language" value={language} onChange={handleLanguageChange}>
-                    <option value="pt">Português</option>
-                    <option value="en">Inglês</option>
-                    {/* Adicione mais idiomas conforme necessário */}
-                </select>
-            </div>
-            <div className="configuracao">
-                <label htmlFor="notifications">Notificações:</label>
-                <input
-                    type="checkbox"
-                    id="notifications"
-                    checked={notificationsEnabled}
-                    onChange={handleNotificationToggle}
-                />
-            </div>
-            <button onClick={handleSave}>Salvar Configurações</button>
+        <div className="container">
+            <Header />
+            <main>
+                <div id="cssportal-grid">
+                    <div id="botoes">
+                        <div id="cssportal-grid-2">
+                            <div id="NomeConfiguraçoes">Configuraçoes</div>
+                            <div id="Botoes">
+                                <button onClick={() => setActiveDiv('categorias')} type="button">Categorias</button>
+                                <button onClick={() => setActiveDiv('bancos')} type="button">Bancos</button>
+                                <button onClick={() => setActiveDiv('cartoes')} type="button">Cartões</button>
+                            </div>
+                            <div id="Redefinir">
+                                <button type="reset">Redefinir</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="interface-configuracoes">
+                        {renderActiveDiv()} {/* Renderiza a div ativa */}
+                    </div>
+                </div>
+            </main>
         </div>
     );
 };
