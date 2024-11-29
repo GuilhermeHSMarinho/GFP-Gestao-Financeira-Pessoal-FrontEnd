@@ -1,0 +1,185 @@
+.body-class {
+    background-color: #2e2e2e;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #818181;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/** GRID **/
+.cssportalGrid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    grid-auto-flow: column dense;
+    width: 100%;
+    height: 100%;
+}
+
+.contentMain {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentBody {
+    grid-area: 1 / 2 / 2 / 7;
+    background-color: rgb(179, 179, 179);
+}
+
+/** Sub-grid dentro de contentMain **/
+.cssportalgrid2 { /* Alterado de #cssportalgrid2 para .cssportalgrid2 */
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: 1fr;
+    gap: 0;
+    grid-auto-flow: column dense;
+    width: 100%;
+    height: 100%;
+}
+
+.contentTitleWelcome {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentTitleControlPanel {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentButtonCarteira {
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentButtonObjetivos {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentButtonAtivos {
+    grid-area: 6 / 1 / 7 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentButtonHistorico {
+    grid-area: 7 / 1 / 8 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentButtonRelatorios {
+    grid-area: 9 / 1 / 10 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentTitleCarteira {
+    grid-area: 5 / 1 / 6 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentBlank {
+    grid-area: 10 / 1 / 16 / 2;
+    background-color: rgb(67, 138, 195);
+}
+
+.contentTitleIndicadores {
+    grid-area: 8 / 1 / 9 / 2;
+    background-color: rgb(67, 138, 195);
+}
+/** GRID **/
+
+.contentTitleControlPanel, .contentTitleCarteira, .contentTitleIndicadores {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0c436f;
+    text-align: left;
+    padding: 2px 10px;
+}
+
+.TitleWelcome{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    padding: 2px 10px;
+}
+.subtitleWelcome{
+    font-size:  14px;
+    font-weight: normal;
+    color: #ffffff;
+    text-align: left;
+    padding: 8px 10px;
+    margin-top: -10%;
+}
+
+.contentButtonCarteira button, .contentButtonObjetivos button, .contentButtonAtivos button,
+.contentButtonHistorico button, .contentButtonRelatorios button {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    padding:  10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contentButtonCarteira button:hover,
+.contentButtonObjetivos button:hover,
+.contentButtonAtivos button:hover,
+.contentButtonHistorico button:hover,
+.contentButtonRelatorios button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente mais claro */
+    color: #0c436f; /* Cor do texto em azul-escuro ao passar o mouse */
+    transition: background-color 0.3s, color 0.3s; /* Efeito de transição suave */
+}
+
+/* Adicionando uma leve sombra ao passar o mouse */
+.contentButtonCarteira button:hover,
+.contentButtonObjetivos button:hover,
+.contentButtonAtivos button:hover,
+.contentButtonHistorico button:hover,
+.contentButtonRelatorios button:hover {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+/* Efeito ao clicar */
+.contentButtonCarteira button:active,
+.contentButtonObjetivos button:active,
+.contentButtonAtivos button:active,
+.contentButtonHistorico button:active,
+.contentButtonRelatorios button:active {
+    background-color: rgba(0, 0, 0, 0.2); /* Fundo um pouco mais escuro */
+    transform: scale(0.98); /* Leve redução de escala para simular o pressionamento */
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra interna */
+    transition: transform 0.05s; /* Transição rápida para a redução de escala */
+}
+
+.activeButton {
+    background-color: #3e7bab; /* Cor de fundo para o botão ativo */
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.icon {
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+    fill: white; /* Garante que o ícone será exibido em branco (funciona se o SVG suportar isso) */
+}
+
+
+
+

@@ -1,0 +1,178 @@
+.popupBancoCadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    color: white;
+}
+
+.popup-contentBancoCadastro {
+    background: #434343;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    position: relative; /* Para que o overlay fique posicionado corretamente */
+    z-index: 1; /* Para garantir que o conteúdo do pop-up fique acima do overlay */
+}
+
+.color-pickerBancoCadastro {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.color-displayBancoCadastro {
+    width: 50px;  /* Tamanho do quadrado de cor */
+    height: 50px; /* Tamanho do quadrado de cor */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.selected-iconBancoCadastro {
+    width: 30px;  /* Tamanho do ícone */
+    height: 30px;
+    object-fit: contain;
+    position: absolute;
+}
+
+.icon-gridBancoCadastro {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    grid-template-rows: repeat(3, 1fr); /* 3 linhas visíveis */
+    gap: 10px;
+    max-height: 145px; /* Altura do contêiner para 3 linhas de ícones */
+    overflow-y: scroll; /* Habilita a rolagem vertical */
+    padding: 10px; /* Espaço interno para os ícones */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #3B3B3B;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.icon-itemBancoCadastro {
+    width: 40px;  /* Tamanho do quadrado de ícone */
+    height: 40px; /* Tamanho do quadrado de ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #ccc;
+}
+
+.icon-itemBancoCadastro:hover {
+    transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+.icon-itemBancoCadastro svg {
+    font-size: 20px; /* Tamanho do ícone ajustável */
+    color: #ffffff;
+}
+
+/* Estilo para quando o ícone for selecionado */
+.icon-itemBancoCadastro.selected {
+    border: 2px solid #007BFF; /* Borda azul para destacar o ícone selecionado */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4); /* Sombra destacada para dar o efeito de sobressair */
+    transform: scale(1.1); /* Aumenta o ícone levemente */
+}
+
+.button-containerBancoCadastro {
+    display: flex;
+    justify-content: space-between; /* Espaça os botões para as extremidades */
+    margin-top: 20px; /* Espaço acima dos botões */
+}
+
+.buttonBancoCadastro {
+    background-color: #007BFF; /* Azul */
+    border: none;
+    border-radius: 8px; /* Arredondamento das bordas */
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttonBancoCadastro:hover {
+    background-color: #0056b3; /* Azul mais escuro */
+}
+
+.cancel-btnBancoCadastro {
+    background-color: #dc3545; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Arredondamento das bordas */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btnBancoCadastro:hover {
+    background-color: #c82333; /* Vermelho escuro */
+}
+
+.loading-messageBancoCadastro {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.overlay-iconBancoCadastro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o conteúdo */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10; /* Para garantir que fique acima do conteúdo do pop-up */
+    padding: 20px;
+    border-radius: 10px; /* Arredondar cantos do pop-up */
+    width: 100%; /* Largura total do pop-up */
+    height: 100%; /* Altura total do pop-up */
+}
+
+.feedback-messageBancoCadastro {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    text-align: center; /* Centraliza o texto */
+}
+
+.input-groupBancoCadastro {
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-right: 15px;
+}
+
+.input-groupBancoCadastro label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #dddddd;
+}
+
+.input-groupBancoCadastro input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #c5c5c5;
+    background: #B3B3B3;
+    border-radius: 5px; /* Arredondamento das bordas */
+}

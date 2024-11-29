@@ -1,0 +1,181 @@
+/* src/Popup/CadastroContaPoupanca/ContaPoupanca.css */
+
+/* Estilo do fundo do popup */
+.popupContaPoupanca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+    z-index: 1000; /* Para garantir que fique acima de outros elementos */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo da caixa do popup */
+.popup-contentContaPoupanca {
+    background: #434343; /* Cor de fundo da caixa */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra da caixa */
+    max-width: 400px; /* Largura máxima do popup */
+    width: 100%; /* Largura total */
+    position: relative; /* Necessário para posicionamento relativo */
+}
+
+/* Estilo para o botão de fechar */
+.closeContaPoupanca {
+    position: absolute;
+    top: 10px; /* Distância do topo */
+    right: 15px; /* Distância da direita */
+    cursor: pointer; /* Cursor em forma de mão */
+    font-size: 20px; /* Tamanho do ícone */
+    color: #ffffff; /* Cor do ícone */
+}
+
+/* Estilo para grupos de entrada */
+.input-groupContaPoupanca {
+    margin-bottom: 1rem; /* Espaçamento inferior */
+    text-align: left; /* Alinhamento à esquerda */
+    padding-right: 35px; /* Espaçamento para ajuste visual */
+}
+
+/* Estilo para o campo de entrada com ícone */
+.input-with-icon {
+    position: relative; /* Necessário para o posicionamento do ícone */
+}
+
+/* Estilo do ícone de entrada */
+.input-icon {
+    position: absolute;
+    left: 10px; /* Distância da esquerda */
+    top: 50%; /* Centralizado verticalmente */
+    transform: translateY(-50%); /* Ajuste para centralizar */
+    color: #888; /* Cor do ícone */
+    pointer-events: none; /* Garante que o clique no ícone não afete o input */
+}
+
+/* Estilo do container dos botões */
+.button-containerContaPoupanca {
+    display: flex; /* Usar flexbox para alinhamento */
+    justify-content: space-between; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaço superior */
+}
+
+/* Estilo do botão de enviar */
+.submit-btnContaPoupanca {
+    background-color: #48bb78; /* Verde */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor em forma de mão */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+/* Efeito ao passar o mouse sobre o botão de enviar */
+.submit-btnContaPoupanca:hover {
+    background-color: #38a169; /* Tom mais escuro de verde */
+}
+
+/* Estilo do botão de cancelar */
+.cancel-btnContaPoupanca {
+    background-color: #f56565; /* Vermelho */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor em forma de mão */
+    border-radius: 8px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Efeito de transição */
+}
+
+/* Efeito ao passar o mouse sobre o botão de cancelar */
+.cancel-btnContaPoupanca:hover {
+    background-color: #e53e3e; /* Tom mais escuro de vermelho */
+}
+
+/* Estilo para mensagens de carregamento e feedback */
+.loading-messageContaPoupanca,
+.feedback-messageContaPoupanca {
+    text-align: center; /* Centralizar texto */
+    margin-top: 10px; /* Espaçamento superior */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto */
+}
+
+/* Estilo para a mensagem de erro */
+.error-message {
+    color: #ff4d4d; /* Vermelho para mensagens de erro */
+    font-size: 14px; /* Tamanho da fonte */
+    margin-top: 10px; /* Espaçamento superior */
+    text-align: center; /* Centralizar texto */
+}
+
+/* Estilo do campo de entrada para valores monetários */
+input[type="text"],
+input[type="date"],
+input[type="number"] {
+    width: 100%; /* Largura total */
+    /* Espaçamento interno */
+    border: 1px solid #c5c5c5; /* Borda cinza */
+    /* Desloca o texto para a direita */
+    padding: 0.5rem 0.5rem 0.5rem 30px;
+    background: #B3B3B3; /* Cor de fundo dos inputs */
+    border-radius: 0 5px 0 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+}
+
+/* Efeito ao focar em um campo de entrada */
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus {
+    border-color: #48bb78; /* Borda verde ao focar */
+    outline: none; /* Sem contorno padrão */
+}
+
+/* Estilo do switch para rentável */
+.toggle-switch {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-switch input {
+    display: none; /* Oculta o checkbox original */
+}
+
+.switch-label {
+    position: relative;
+    width: 50px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.switch-button {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+.toggle-switch input:checked + .switch-label {
+    background-color: #2196F3; /* Cor quando ativado */
+}
+
+.toggle-switch input:checked + .switch-label .switch-button {
+    transform: translateX(26px); /* Move o botão para a direita */
+}
+
+.switch-text {
+    margin-left: 10px; /* Espaçamento entre o switch e o texto */
+    vertical-align: middle; /* Alinha o texto com o switch */
+}

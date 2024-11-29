@@ -1,0 +1,134 @@
+.popupCripto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 1000;
+    color: white; /* Texto branco */
+}
+
+.popup-contentCripto {
+    background: #434343; /* Cor de fundo mais escura */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px; /* Largura máxima */
+    width: 100%; /* Largura total */
+    position: relative; /* Para o posicionamento do botão de fechar */
+}
+
+.closeCripto {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #dddddd; /* Cor do ícone de fechar */
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #ffffff; /* Cor do texto do título */
+}
+
+.input-groupCripto {
+    margin-bottom: 1rem; /* Espaçamento inferior */
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+.input-groupCripto label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #dddddd; /* Cor do rótulo */
+}
+
+.input-groupCripto input[type="text"],
+.input-groupCripto input[type="number"],
+.input-groupCripto input[type="date"] {
+    width: 90%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #c5c5c5; /* Borda do input */
+    background: #B3B3B3; /* Cor de fundo do input */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding-left: 30px; /* Espaço para ícone */
+    transition: border-color 0.3s; /* Efeito de transição */
+}
+
+.input-with-icon {
+    position: relative; /* Para posicionamento do ícone */
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px; /* Posição do ícone */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888; /* Cor do ícone */
+    pointer-events: none; /* Não permite interação com o ícone */
+}
+
+.input-groupCripto input:focus {
+    border-color: #007bff; /* Cor ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.button-containerCripto {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+.cancel-btnCripto {
+    background-color: #f56565; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btnCripto:hover {
+    background-color: #e53e3e; /* Vermelho mais escuro */
+}
+
+.submit-btnCripto {
+    background-color: #48bb78; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btnCripto:hover {
+    background-color: #38a169; /* Verde mais escuro */
+}
+
+.feedback-messageCripto {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #4caf50; /* Verde para sucesso */
+}
+
+.error-message {
+    color: #ff4d4d; /* Vermelho para erro */
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center; /* Centraliza a mensagem de erro */
+}
+
+.espacamentoIcon {
+    margin-bottom: 10px; /* Espaçamento entre os campos */
+}

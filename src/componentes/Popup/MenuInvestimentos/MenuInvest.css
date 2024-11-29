@@ -1,0 +1,95 @@
+/* Painel lateral */
+.side-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0; /* Começa escondido */
+    overflow: hidden;
+    background-color: #f0f0f0;
+    transition: width 0.3s ease; /* Animação suave */
+    z-index: 1000; /* Para garantir que o painel fique acima de outros elementos */
+}
+
+.side-panel.expanded {
+    width: 35%; /* Expande para 35% da tela */
+}
+
+.side-panel-content {
+    padding: 20px; /* Espaçamento interno para evitar sobreposição */
+    position: relative; /* Para que o botão de fechamento seja posicionado corretamente */
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 10px; /* Ajuste a posição conforme necessário */
+    right: 15px; /* Ajuste a posição conforme necessário */
+    z-index: 1001; /* Garante que o botão fique acima do conteúdo */
+}
+
+/* Grid de Menu */
+#cssportal-grid-Menu-Ativos {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+    height: 35vw;
+}
+
+/* Estilos dos itens */
+#cssportal-grid-Menu-Ativos > div {
+    background-color: #E2E2E2; /* Cor de fundo */
+    box-shadow: 2px 2px 5px #696969; /* Sombra nos lados direito, esquerdo e baixo */
+    text-align: center; /* Centraliza o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaça a imagem e o texto */
+    align-items: center;
+    aspect-ratio: 1/1; /* Deixa as grids quadradas */
+    border: 1px solid #282828; /* Adiciona a borda de 10px preta */
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições para animação suave */
+}
+
+/* Efeito de hover */
+#cssportal-grid-Menu-Ativos > div:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do item */
+    box-shadow: 4px 4px 15px #000000; /* Aumenta a sombra */
+}
+
+/* Efeito de clique */
+#cssportal-grid-Menu-Ativos > div:active {
+    transform: scale(0.95); /* Diminui um pouco o tamanho do item ao clicar */
+    box-shadow: 2px 2px 5px #000000; /* Reduz a sombra */
+}
+
+#cssportal-grid-Menu-Ativos img {
+    max-width: 90%; /* Aumenta o tamanho da imagem */
+    max-height: 70%; /* Garante que a imagem não ultrapasse a área da grid */
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+#cssportal-grid-Menu-Ativos div br {
+    display: block; /* Garante a exibição do texto abaixo */
+}
+
+#cssportal-grid-Menu-Ativos div p {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.colortext{
+    color: black;
+
+}
