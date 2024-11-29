@@ -1,0 +1,240 @@
+.container {
+    background-color: #818181;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/** Primeira GRID **/
+.LancamentoMain {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+.LancamentoMain01 {
+    grid-area: 1 / 1 / 2 / 7;
+    background-color: rgba(155,177,190, 0.5);
+}
+.LancamentoMain02 {
+    grid-area: 2 / 1 / 7 / 7;
+    background-color: rgba(238,79,30, 0.5);
+}
+
+/** GRID do Main 01 **/
+
+.LancamentoMain01Body {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+.LancamentoMain01BodyTXTBody {
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: rgba(112,226,104, 0.5);
+}
+.LancamentoMain01BodyCMBFiltro {
+    grid-area: 1 / 4 / 2 / 6;
+    background-color: rgba(189,27,76, 0.5);
+}
+.LancamentoMain01BodyCalendario {
+    grid-area: 1 / 6 / 2 / 9;
+    background-color: rgba(44,126,229, 0.5);
+}
+.LancamentoMain01Bodyblank {
+    grid-area: 1/9/2/10;
+    background-color: rgba(87,194,182, 0.5);
+}
+.LancamentoMain01BodyBTNDespesa {
+    grid-area: 1/10/2/11;
+    background-color: rgba(110,219,2, 0.5);
+}
+.LancamentoMain01BodyBTNReceita {
+    grid-area: 1/11/2/12;
+    background-color: rgba(82,38,120, 0.5);
+}
+
+/** GRID do Main 02 **/
+
+.LancamentoMain02Body {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+.LancamentoMain02BodyBlank01 {
+    grid-area: 1/1/2/2;
+    background-color: rgba(198,161,121, 0.5);
+}
+.LancamentoMain02BodyBlank02 {
+    grid-area: 1/7/2/8;
+    background-color: rgba(123,245,57, 0.5);
+}
+.LancamentoMain02BodyContent {
+    grid-area: 1 / 2 / 2 / 7;
+    background-color: rgba(173,93,167, 0.5);
+}
+
+/** GRID para o Card **/
+
+/* Desativar hover para a classe noHover */
+.noHover:hover {
+    pointer-events: none;  /* Desabilita o hover */
+    background-color: inherit;  /* Remove qualquer mudança de cor de fundo no hover */
+    cursor: default;  /* Muda o cursor para o padrão */
+}
+
+/* Caso o efeito hover seja aplicado em outros elementos dentro da classe */
+.noHover .LancamentoMain02BodyValorCard:hover,
+.noHover .LancamentoMain02BodydataCard:hover,
+.noHover .LancamentoMain02BodyBancosCard:hover,
+.noHover .LancamentoMain02BodyCategoriasCard:hover,
+.noHover .LancamentoMain02BodyNomeContaCard:hover,
+.noHover .LancamentoMain02BodyIcoCard:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+
+.LancamentoMain02BodyCard {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 0;
+    width: 98%; /* Defina uma largura menor para limitar o tamanho do card */
+    max-width: 0,95vw; /* Defina uma largura máxima para o card */
+    height: auto; /* Ajuste a altura para conteúdo */
+    max-height: 100px; /* Defina uma altura máxima para evitar que o card fique muito alto */
+    margin: 10px auto; /* Centralize o card e adicione espaço ao redor */
+    border-radius: 8px; /* Bordas arredondadas para estética */
+    background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar o card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Estilos para os elementos individuais dentro do card */
+
+.LancamentoMain02BodyValorCard {
+    grid-area: 1 / 8 / 2 / 9;
+    background-color: rgba(58,128,102, 0.5);
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.LancamentoMain02BodydataCard {
+    grid-area: 1 / 7 / 2 / 8;
+    background-color: rgba(3,255,7, 0.5);
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.LancamentoMain02BodyBancosCard {
+    grid-area: 1 / 6 / 2 / 7;
+    background-color: rgba(38,122,24, 0.5);
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.LancamentoMain02BodyCategoriasCard {
+    grid-area: 1 / 4 / 2 / 6;
+    background-color: rgba(101,219,81, 0.5);
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.LancamentoMain02BodyNomeContaCard {
+    grid-area: 1 / 2 / 2 / 4;
+    background-color: rgba(225,47,232, 0.5);
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.LancamentoMain02BodyIcoCard {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgba(119,108,155, 0.5);
+    padding: 5px;
+    font-size: 18px; /* Tamanho maior para o ícone */
+    text-align: center;
+}
+
+.LancamentoMain02BodyCard:hover {
+    transform: scale(1.01); /* Aumenta o tamanho do card */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.3); /* Aumenta a sombra para destacar */
+    background-color: rgba(255, 255, 255, 1); /* Muda a cor de fundo ao passar o mouse */
+}
+
+/** GRID dentro do Calendario **/
+
+.LancamentoMain01BodyCalendariobody {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+.LancamentoMain01BodyCalendarioAno {
+    grid-area: 1 / 1 / 2 / 5;
+    background-color: rgba(241,151,202, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes01 {
+    grid-area: 2/1/3/2;
+    background-color: rgba(156,114,21, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes02 {
+    grid-area: 2/2/3/3;
+    background-color: rgba(53,157,121, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes03 {
+    grid-area: 2/3/3/4;
+    background-color: rgba(140,242,131, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes04 {
+    grid-area: 2/4/3/5;
+    background-color: rgba(184,15,228, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes05 {
+    grid-area: 3/1/4/2;
+    background-color: rgba(111,62,153, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes06 {
+    grid-area: 3/2/4/3;
+    background-color: rgba(226,87,136, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes07 {
+    grid-area: 3/3/4/4;
+    background-color: rgba(169,104,134, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes08 {
+    grid-area: 3/4/4/5;
+    background-color: rgba(1,25,147, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes09 {
+    grid-area: 4/1/5/2;
+    background-color: rgba(150,164,146, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes10 {
+    grid-area: 4/2/5/3;
+    background-color: rgba(92,67,89, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes11 {
+    grid-area: 4/3/5/4;
+    background-color: rgba(32,7,125, 0.5);
+}
+.LancamentoMain01BodyCalendarioMes12 {
+    grid-area: 4/4/5/5;
+    background-color: rgba(215,182,182, 0.5);
+}

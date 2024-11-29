@@ -1,7 +1,7 @@
 // Header.js
-import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // Importando useLocation
-import './Header.css'; // Estilos podem ser separados em um novo arquivo CSS
+import React, { useState, useRef, useEffect, useContext } from 'react'; // Importando useContext
+import { useNavigate, useLocation } from 'react-router-dom';
+import './Header.css';
 import profile from "./profile.svg";
 import IconHouse from "./Icones/dashboard/house.svg";
 import iconCalendar from "./Icones/dashboard/calendar.svg";
@@ -12,13 +12,15 @@ import iconwallet from "./Icones/dashboard/wallet-3.svg";
 import iconsetting from "./Icones/dashboard/setting-2.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faBars } from '@fortawesome/free-solid-svg-icons';
+import { AuthContext } from './segurança/JWT/AuthContext'; // Importando o AuthContext
 
 const Header = () => {
     const [showNumbers, setShowNumbers] = useState(true);
     const [menuOpen, setMenuOpen] = useState(false);
     const mainRef = useRef(null);
     const navigate = useNavigate();
-    const location = useLocation(); // Usando para pegar o caminho atual
+    const location = useLocation();
+    const { userName } = useContext(AuthContext); // Obtendo o nome do usuário do AuthContext
 
     const toggleNumbersInElement = (element, hideNumbers) => {
         element.childNodes.forEach((node) => {
@@ -50,7 +52,6 @@ const Header = () => {
         setMenuOpen(!menuOpen);
     };
 
-    // Função para verificar e navegar
     const navigateToPage = (path) => {
         if (location.pathname === path) {
             window.alert("Você já está nesta página!");
@@ -76,7 +77,7 @@ const Header = () => {
         <header className="header-container">
             <div className="header-left">
                 <img src={profile} alt="Ícone de Login" className="iconprofile" />
-                <span className="username">Guilherme Marinho</span>
+                <span className="username">{userName ? userName : 'Erro ao carregar o nome!!'}</span> {/* Exibindo o nome do usuário */}
                 <FontAwesomeIcon
                     icon={showNumbers ? faEyeSlash : faEye}
                     className="eye-icon"
@@ -92,8 +93,8 @@ const Header = () => {
                     <button type="button" onClick={() => navigateToPage('/dashboard')}>
                         <img src={IconHouse} alt="Ícone de Visão Geral" className="iconbuttons" /> Visão Geral
                     </button>
-                    <button type="button" onClick={() => navigateToPage('/calendario')}>
-                        <img src={iconCalendar} alt="Ícone de Calendário" className="iconbuttons" /> Calendario de Gastos
+                    <button type="button" onClick={() => navigateToPage('/cg')}>
+                        <img src={iconCalendar} alt="Ícone de Calendário" className="iconbuttons" /> Calendário de Gastos
                     </button>
                     <button type="button" onClick={() => navigateToPage('/lancamentos')}>
                         <img src={icontasksquare} alt="Ícone de Lançamentos" className="iconbuttons" /> Lançamentos
@@ -121,8 +122,8 @@ const Header = () => {
                     <button type="button" onClick={() => navigateToPage('/dashboard')}>
                         <img src={IconHouse} alt="Ícone de Visão Geral" className="iconbuttons" /> Visão Geral
                     </button>
-                    <button type="button" onClick={() => navigateToPage('/calendario')}>
-                        <img src={iconCalendar} alt="Ícone de Calendário" className="iconbuttons" /> Calendario de Gastos
+                    <button type="button" onClick={() => navigateToPage('/cg')}>
+                        <img src={iconCalendar} alt="Ícone de Calendário" className="iconbuttons" /> Calendário de Gastos
                     </button>
                     <button type="button" onClick={() => navigateToPage('/lancamentos')}>
                         <img src={icontasksquare} alt="Ícone de Lançamentos" className="iconbuttons" /> Lançamentos

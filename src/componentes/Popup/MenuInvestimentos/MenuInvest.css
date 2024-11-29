@@ -1,3 +1,4 @@
+/* Painel lateral */
 .side-panel {
     position: absolute;
     right: 0;
@@ -31,23 +32,64 @@
     z-index: 1001; /* Garante que o botão fique acima do conteúdo */
 }
 
+/* Grid de Menu */
 #cssportal-grid-Menu-Ativos {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     width: 100%;
     height: 35vw;
 }
 
-/* Os estilos dos itens do menu */
-#RendaVariavel { background-color: rgba(99, 110, 19, 0.5); }
-#FundosePrevidencia { background-color: rgba(225, 18, 10, 0.5); }
-#RendaFixa { background-color: rgba(53, 71, 60, 0.5); }
-#TesouroDireto { background-color: rgba(64, 7, 204, 0.5); }
-#Moeda { background-color: rgba(115, 65, 245, 0.5); }
-#Criptomoeda { background-color: rgba(42, 92, 155, 0.5); }
-#ContaCorrente { background-color: rgba(147, 107, 48, 0.5); }
-#Poupança { background-color: rgba(124, 55, 82, 0.5); }
-#Derivativos { background-color: rgba(247, 100, 140, 0.5); }
-#Personalizado { background-color: rgba(84, 112, 54, 0.5); }
+/* Estilos dos itens */
+#cssportal-grid-Menu-Ativos > div {
+    background-color: #E2E2E2; /* Cor de fundo */
+    box-shadow: 2px 2px 5px #696969; /* Sombra nos lados direito, esquerdo e baixo */
+    text-align: center; /* Centraliza o conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaça a imagem e o texto */
+    align-items: center;
+    aspect-ratio: 1/1; /* Deixa as grids quadradas */
+    border: 1px solid #282828; /* Adiciona a borda de 10px preta */
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transições para animação suave */
+}
+
+/* Efeito de hover */
+#cssportal-grid-Menu-Ativos > div:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do item */
+    box-shadow: 4px 4px 15px #000000; /* Aumenta a sombra */
+}
+
+/* Efeito de clique */
+#cssportal-grid-Menu-Ativos > div:active {
+    transform: scale(0.95); /* Diminui um pouco o tamanho do item ao clicar */
+    box-shadow: 2px 2px 5px #000000; /* Reduz a sombra */
+}
+
+#cssportal-grid-Menu-Ativos img {
+    max-width: 90%; /* Aumenta o tamanho da imagem */
+    max-height: 70%; /* Garante que a imagem não ultrapasse a área da grid */
+    height: auto;
+    width: auto;
+    display: block;
+}
+
+#cssportal-grid-Menu-Ativos div br {
+    display: block; /* Garante a exibição do texto abaixo */
+}
+
+#cssportal-grid-Menu-Ativos div p {
+    margin: 0;
+    padding-top: 10px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.colortext{
+    color: black;
+
+}

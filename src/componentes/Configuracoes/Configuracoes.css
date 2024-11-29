@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    background-color: #818181;
+    background-color: #AAAAAA;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,60 +21,323 @@ body {
     gap: 0 10px;
     width: 100%;
     height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
 }
 
 #interface-configuracoes {
     grid-area: 1 / 2 / 7 / 7;
-    background-color: rgba(92, 66, 135, 0.5);
+    background-color: rgba(115, 115, 115);
 }
 
 #botoes {
     grid-area: 1 / 1 / 7 / 2;
-    background-color: rgba(16, 39, 206, 0.5);
+    background-color: rgb(144, 144, 144);
 }
 
 #cssportal-grid-2 {
     display: grid;
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: 1fr;
-    gap: 0px 10px;
+    gap: 0 10px;
     width: 100%;
     height: 100%;
 }
+
 #NomeConfiguraçoes {
     grid-area: 1/1/2/2;
-    background-color: rgba(239,116,128, 0.5);
+    background-color: rgb(58, 123, 175); /* Cor de fundo */
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
 }
+
+#NomeConfiguraTXT {
+    color: black; /* Cor do texto em preto */
+    font-family: "Times New Roman", serif; /* Estilo da fonte semelhante ao da imagem */
+    font-weight: bold; /* Negrito */
+    font-size: 28px; /* Tamanho do texto */
+    padding: 10px 20px; /* Espaçamento interno ao redor do texto */
+    background-color: #b0b0b0; /* Cor de fundo atrás do texto (parecido com a imagem) */
+    border-radius: 0 10px 0 10px; /* Bordas arredondadas */
+    display: inline-block;
+    text-align: center; /* Alinha o texto dentro do elemento */
+}
+
 #Botoes {
     grid-area: 2 / 1 / 8 / 2;
-    background-color: rgba(140,129,162, 0.5);
+    background-color: rgb(144, 144, 144);
 }
+
 #Redefinir {
-    grid-area: 8/1/9/2;
-    background-color: rgba(103,241,149, 0.5);
+    grid-area: 7 / 1 / 9 / 2;
+    background-color: rgb(102, 102, 102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+
+#Redefinir button {
+    width: 70%;    /* Largura do botão é 50% do contêiner */
+    height: 40%;   /* Altura do botão é 20% da altura do contêiner */
+    font-size: 16px; /* Controle o tamanho da fonte */
+    color: #8a0000;
 }
 
 #cssportal-grid-3 {
     display: grid;
     grid-template-rows: repeat(8, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    gap: 0px 10px;
+    gap: 5px 0;
+    padding-top: 5px;
     width: 100%;
     height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
 }
-#Gerenciamento-de-Categorias {
+
+#Gerenciamento-de-Categorias,
+#Gerenciamento-de-Bancos,
+#Gerenciamento-de-Cartoes{
     grid-area: 1 / 1 / 2 / 5;
-    background-color: rgba(98,105,116, 0.5);
+    background-color: rgb(127, 127, 127);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    padding: 0 20px;
+    font-size: 150%;
 }
-#botao {
-    grid-area: 1/5/2/6;
-    background-color: rgba(222,249,66, 0.5);
+
+.CONFGCAT {
+    grid-area: 1 / 5 / 2 / 6;
+    background-color: rgb(127, 127, 127);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
+
+.CONFGCAT .cad_cat {
+    width: 80%;
+    height: 50%;
+    font-size: 16px;
+    background-color: #438AC3;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s; /* Adiciona transição suave */
+}
+
+.CONFGCAT .cad_cat:hover {
+    background-color: #356f9a; /* Muda a cor de fundo ao passar o mouse */
+    transform: scale(1.05);    /* Levemente aumenta o tamanho do botão */
+}
+
+.CONFGCAT .cad_cat:active {
+    background-color: #2a4e6d; /* Cor ao clicar */
+    transform: scale(0.95);    /* Levemente diminui o tamanho do botão */
+}
+
 #total {
-    grid-area: 1/6/2/7;
-    background-color: rgba(96,87,139, 0.5);
+    grid-area: 1/6/2/7; /* Definido corretamente na grid */
+    background-color: rgb(114, 114, 114);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo no topo inicialmente */
+    align-items: flex-end; /* Alinha todo o conteúdo à direita */
+    padding: 10px 20px; /* Ajusta o espaçamento interno */
+    height: 100%; /* Preenche a área da grid */
 }
+
+.TotalTXT {
+    font-size: 150%; /* Tamanho do texto */
+    font-weight: bold;
+    text-align: center; /* Alinha o texto à direita */
+    margin-bottom: 10px; /* Espaçamento para distanciar do próximo elemento */
+    width: 100%; /* Garante que ocupe a largura total */
+}
+
+.TotalEstiloBack {
+    font-size: 150%;
+    background-color: #727272;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #conteudo {
     grid-area: 2 / 1 / 9 / 7;
-    background-color: rgba(16,51,181, 0.5);
+    background-color: rgb(144, 144, 144);
+    max-width: 110vw;  /* Garante que o conteúdo não exceda a largura máxima */
+    overflow-y: auto;  /* Permite apenas a rolagem vertical */
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+.vertical-buttons button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    background-color: #999999;
+    color: #2c2c2c;
+    border: none;
+    cursor: pointer;
+}
+
+.vertical-buttons button:hover {
+    background-color: #666666; /* Muda a cor ao passar o mouse */
+    color: #ffffff; /* Ajusta a cor da fonte no hover */
+    font-size: 20px;
+}
+
+.vertical-buttons button.active {
+    background-color: #727272; /* Cor de fundo do botão ativo */
+    color: white; /* Cor do texto do botão ativo */
+}
+
+/* Animações de fade-in e fade-out */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out; /* Suave transição de entrada */
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Suave transição de saída */
+}
+
+#interface-configuracoes {
+    grid-area: 1 / 2 / 7 / 7;
+    background-color: rgb(114, 114, 114);
+    transition: opacity 0.3s ease-in-out; /* Suave transição de opacidade */
+}
+
+.categorias-container {
+    max-height: 95vh;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: rgb(144, 144, 144); /* Fundo conforme na imagem */
+}
+
+.categoria-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bfbfbf; /* Cor do fundo do card */
+    margin-bottom: 5px; /* Espaçamento entre os cards */
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.categoria-card:hover {
+    transform: scale(1.005); /* Efeito de hover */
+}
+
+.categoria-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ccc; /* Placeholder para o ícone */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categoria-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.categoria-nome {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.categoria-dados {
+    display: flex;
+    justify-content: space-between; /* Espaça os itens igualmente */
+    margin-top: 5px; /* Espaço acima dos dados da categoria */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+}
+
+.categoria-utilizada,
+.categoria-limite {
+    flex: 1; /* Faz com que ocupem igual espaço */
+    margin: 0 5px; /* Espaço entre os itens */
+}
+
+.categoria-titulo {
+    font-weight: bold; /* Título em negrito */
+    font-size: 14px; /* Tamanho do texto do título */
+}
+
+.categoria-valor {
+    font-size: 14px; /* Tamanho do texto do valor */
+}
+
+.categoria-acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.editar-icone,
+.deletar-icone {
+    width: 3vw; /* Tamanho dos ícones */
+    height: 3vw;
+    background-color: #bbb; /* Placeholder para os ícones */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para cor e transformação */
+}
+
+.editar-icone:hover,
+.deletar-icone:hover {
+    background-color: #ccc; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente o tamanho do ícone */
+}
+
+.editar-icone:active,
+.deletar-icone:active {
+    background-color: #aaa; /* Cor ao clicar */
+    transform: scale(0.95); /* Diminui levemente o tamanho do ícone */
+}
+
+
+.deletar-icone {
+    color: #B24F4F; /* Ícone de lixeira vermelho */
+}
+
+/* Estilizando a barra de rolagem para navegadores baseados em WebKit (Chrome, Safari) */
+#conteudo::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem vertical */
+    background-color: #171717; /* Cor de fundo da barra de rolagem */
+}
+
+#conteudo::-webkit-scrollbar-thumb {
+    background-color: #438AC3; /* Cor do "thumb" (parte que arrasta) */
+    border-radius: 10px; /* Bordas arredondadas do "thumb" */
+}
+
+#conteudo::-webkit-scrollbar-thumb:hover {
+    background-color: #356f9a; /* Cor ao passar o mouse sobre o "thumb" */
+}
+
+#conteudo::-webkit-scrollbar-track {
+    background-color: #444444; /* Cor do "track" (parte onde o "thumb" se move) */
+}
+
+/* Para o Firefox */
+#conteudo {
+    scrollbar-width: thin; /* Tornar a barra de rolagem fina */
+    scrollbar-color: #438AC3 #444444; /* Cor do "thumb" e do "track" */
 }

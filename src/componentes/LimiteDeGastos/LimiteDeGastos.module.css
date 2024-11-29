@@ -1,0 +1,624 @@
+.container {
+    background-color: #818181;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.LGMain {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+.LGMain01 {
+    grid-area: 1 / 1 / 2 / 6;
+    background-color: rgb(90, 90, 90);
+
+    /* Estilização da fonte */
+    font-size: 130%; /* Define o tamanho da fonte como 90% */
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    padding-left: 5%; /* Adiciona espaçamento à esquerda, se necessário */
+}
+
+.LGMain02 {
+    grid-area: 1 / 6 / 2 / 8;
+    background-color: rgb(90, 90, 90);
+}
+.LGMain03 {
+    grid-area: 2 / 1 / 7 / 8;
+    background-color: rgb(138, 138, 138);
+}
+
+.LGMain01BodyCalendariobody {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr); /* 4 linhas */
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 5px;
+    width: 90%;
+    height: 90%; /* Garantir que ocupe 100% da altura disponível */
+}
+
+.LGMain01BodyCalendarioAno {
+    grid-area: 1 / 1 / 2 / 5;
+    padding-top: 5px;
+}
+.LGMain01BodyCalendarioMes01 {
+    grid-area: 2/1/3/2;
+}
+.LGMain01BodyCalendarioMes02 {
+    grid-area: 2/2/3/3;
+}
+.LGMain01BodyCalendarioMes03 {
+    grid-area: 2/3/3/4;
+}
+.LGMain01BodyCalendarioMes04 {
+    grid-area: 2/4/3/5;
+}
+.LGMain01BodyCalendarioMes05 {
+    grid-area: 3/1/4/2;
+}
+.LGMain01BodyCalendarioMes06 {
+    grid-area: 3/2/4/3;
+}
+.LGMain01BodyCalendarioMes07 {
+    grid-area: 3/3/4/4;
+}
+.LGMain01BodyCalendarioMes08 {
+    grid-area: 3/4/4/5;
+}
+.LGMain01BodyCalendarioMes09 {
+    grid-area: 4/1/5/2;
+}
+.LGMain01BodyCalendarioMes10 {
+    grid-area: 4/2/5/3;
+}
+.LGMain01BodyCalendarioMes11 {
+    grid-area: 4/3/5/4;
+}
+.LGMain01BodyCalendarioMes12 {
+    grid-area: 4/4/5/5;
+}
+.LGMain01BodyCalendarioAno,
+.LGMain01BodyCalendarioMes01,
+.LGMain01BodyCalendarioMes02,
+.LGMain01BodyCalendarioMes03,
+.LGMain01BodyCalendarioMes04,
+.LGMain01BodyCalendarioMes05,
+.LGMain01BodyCalendarioMes06,
+.LGMain01BodyCalendarioMes07,
+.LGMain01BodyCalendarioMes08,
+.LGMain01BodyCalendarioMes09,
+.LGMain01BodyCalendarioMes10,
+.LGMain01BodyCalendarioMes11,
+.LGMain01BodyCalendarioMes12 {
+    font-size: 1rem; /* Tamanho padrão para os meses */
+    font-weight: normal; /* Peso de fonte mais leve */
+    color: #000000; /* Cor mais suave */
+
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto no meio */}
+
+.LGMain01BodyCalendarioMes01,
+.LGMain01BodyCalendarioMes02,
+.LGMain01BodyCalendarioMes03,
+.LGMain01BodyCalendarioMes04,
+.LGMain01BodyCalendarioMes05,
+.LGMain01BodyCalendarioMes06,
+.LGMain01BodyCalendarioMes07,
+.LGMain01BodyCalendarioMes08,
+.LGMain01BodyCalendarioMes09,
+.LGMain01BodyCalendarioMes10,
+.LGMain01BodyCalendarioMes11,
+.LGMain01BodyCalendarioMes12 {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #343434;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.LGMain01BodyCalendarioMes01:hover,
+.LGMain01BodyCalendarioMes02:hover,
+.LGMain01BodyCalendarioMes03:hover,
+.LGMain01BodyCalendarioMes04:hover,
+.LGMain01BodyCalendarioMes05:hover,
+.LGMain01BodyCalendarioMes06:hover,
+.LGMain01BodyCalendarioMes07:hover,
+.LGMain01BodyCalendarioMes08:hover,
+.LGMain01BodyCalendarioMes09:hover,
+.LGMain01BodyCalendarioMes10:hover,
+.LGMain01BodyCalendarioMes11:hover,
+.LGMain01BodyCalendarioMes12:hover {
+    background-color: #0056b3;
+    transform: scale(1.01);  /* Efeito de aumento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Sombra para destacar */
+}
+
+.LGMain01BodyCalendarioMes01:active,
+.LGMain01BodyCalendarioMes02:active,
+.LGMain01BodyCalendarioMes03:active,
+.LGMain01BodyCalendarioMes04:active,
+.LGMain01BodyCalendarioMes05:active,
+.LGMain01BodyCalendarioMes06:active,
+.LGMain01BodyCalendarioMes07:active,
+.LGMain01BodyCalendarioMes08:active,
+.LGMain01BodyCalendarioMes09:active,
+.LGMain01BodyCalendarioMes10:active,
+.LGMain01BodyCalendarioMes11:active,
+.LGMain01BodyCalendarioMes12:active {
+    transform: scale(0.95); /* Reduz o tamanho quando pressionado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  /* Sombra mais forte ao pressionar */
+}
+
+
+.LGMain03Body {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    width: 98.7%;
+    height: 100%;
+    padding: 10px;
+
+
+}
+.LGMain03BodyContentGrafic {
+    grid-area: 1 / 1 / 7 / 5;
+    background-color: rgb(179, 179, 179);
+    border: black;
+    border-radius: 10px 10px 0 0 ;
+}
+.LGMain03BodyContent {
+    grid-area: 1 / 5 / 7 / 9;
+    background-color: rgb(179, 179, 179);
+    border: black;
+    border-radius: 10px 10px 0 0;
+    overflow: auto; /* Adiciona rolagem automática, se necessário */
+}
+
+/* Estilizando a barra de rolagem */
+.LGMain03BodyContent::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+}
+
+.LGMain03BodyContent::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5); /* Cor do "polegar" da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.LGMain03BodyContent::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Cor ao passar o mouse */
+}
+
+.LGMain03BodyContent::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.3); /* Cor do fundo da barra de rolagem */
+    border-radius: 10px;
+}
+
+
+.LGMain03BodyContentGraficBody {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+.LGMain03BodyContentGraficBodycontent {
+    grid-area: 2 / 1 / 7 / 10;
+    background-color: rgb(179, 179, 179);
+}
+.LGMain03BodyContentGraficBodyTitle {
+    grid-area: 1 / 1 / 2 / 8;
+
+    /* Estilização da fonte */
+    font-size: 130%; /* Define o tamanho da fonte como 90% */
+    font-weight: bold;
+    text-align: left; /* Alinha o texto à esquerda */
+    display: flex; /* Define o layout flexível */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    padding-left: 5%; /* Adiciona espaçamento à esquerda, se necessário */
+}
+.LGMain03BodyContentGraficBodyIMP {
+    display: grid;
+    place-items: center; /* Centraliza o conteúdo horizontal e verticalmente */
+    grid-area: 1 / 8 / 2 / 9;
+
+}
+
+.LGMain03BodyContentGraficBodyPDF {
+    grid-area: 1 / 9 / 2 / 10;
+
+    display: grid;
+    place-items: center; /* Centraliza o conteúdo horizontal e verticalmente */
+    padding-right: 10%;
+}
+
+.LGMain03BodyContentB {
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+}
+.LGMain03BodyContentBlank01 {
+    grid-area: 1 / 1 / 2 / 10;
+}
+.LGMain03BodyContentBlank02 {
+    grid-area: 2 / 9 / 4 / 10;
+}
+.LGMain03BodyContentBlank03 {
+    grid-area: 2 / 1 / 4 / 2;
+}
+.LGMain03BodyContentBlank04 {
+    grid-area: 4 / 1 / 7 / 10;
+
+}
+.LGMain03BodyContentTitle {
+    grid-area: 2 / 2 / 3 / 9;
+
+}
+.LGMain03BodyContentProgressbar {
+    grid-area: 3 / 2 / 4 / 9;
+    background-color: rgb(164, 164, 164);
+    border: black;
+    border-radius: 10px;
+}
+
+.CardLGMain03BodyContent {
+    display: grid;
+    grid-template-rows: 1fr; /* Apenas uma linha */
+    grid-template-columns: repeat(9, 1fr); /* 9 colunas com larguras proporcionais */
+    gap: 10px; /* Sem espaço entre os itens */
+    width: calc(100% - 20px); /* Subtrai 20px para garantir o espaço da margem (10px em cada lado) */
+    height: 100px; /* Altura do card fixada em 20px */
+    padding: 2px; /* Adiciona 10px de espaço interno ao card */
+    margin: 10px; /* Adiciona 10px de espaço externo ao card */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Estilo quando o card for hover */
+.CardLGMain03BodyContent:hover {
+    transform: scale(1.001); /* Aumenta levemente o tamanho do card */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao redor do card */
+    border: black;
+    border-radius: 10px;
+}
+
+.CardLGMain03BodyContentICO {
+    grid-area: 1/1/2/2; /* Ícone ocupa a primeira célula */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Altura do ícone ajustada para 100% da altura do card */
+}
+
+.CardLGMain03BodyContentProgressbarCatExp {
+    grid-area: 1 / 2 / 2 / 9; /* Barra de progresso ocupa da segunda coluna até a última */
+    height: 100%; /* Altura da barra de progresso ajustada para 100% da altura do card */
+}
+
+/* Estilo para a área dos botões */
+.CardLGMain03BodyContentButtons {
+    grid-area: 1 / 9 / 2 / 10; /* Botões ocupam a última coluna */
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Altura dos botões ajustada para 100% da altura do card */
+    border: black;
+    border-radius: 10px;
+    gap: 10px; /* Espaçamento entre os botões */
+
+}
+
+/* Estilo do botão "Adicionar" */
+.ButtonAdd {
+    background-color: #2846a7; /* Cor de fundo azul */
+    color: white; /* Cor do ícone e texto */
+    border: none;
+    border-radius: 50%; /* Torna o botão redondo */
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/* Efeito de hover para o botão "Adicionar" */
+.ButtonAdd:hover {
+    background-color: #214288; /* Cor de fundo mais escura ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+}
+
+/* Efeito de clique (pulsar) no botão "Adicionar" */
+.ButtonAdd:active {
+    transform: scale(0.95); /* Diminui o botão ligeiramente ao clicar */
+    background-color: #003974; /* Cor mais escura quando clicado */
+}
+
+/* Estilo do botão "Editar" */
+.ButtonEdit {
+    background-color: #d8ad25; /* Cor de fundo amarela */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Torna o botão redondo */
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+/* Efeito de hover para o botão "Editar" */
+.ButtonEdit:hover {
+    background-color: #c78f1a; /* Cor de fundo mais escura ao passar o mouse */
+    transform: scale(1.1); /* Aumenta ligeiramente o tamanho */
+}
+
+/* Efeito de clique (pulsar) no botão "Editar" */
+.ButtonEdit:active {
+    transform: scale(0.95); /* Diminui o botão ligeiramente ao clicar */
+    background-color: #b88b1b; /* Cor mais escura quando clicado */
+}
+
+/* Ajuste do tamanho do ícone dentro do botão */
+.CardLGMain03BodyContentICO svg {
+    font-size: 18px; /* Tamanho adequado para o ícone no botão */
+    color: white; /* Cor do ícone */
+}
+
+/* Animação para os botões ao serem clicados */
+.animateButton {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+.ProgressbarCatExpI {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    width: 100%;
+    height: 100%;
+}
+.ProgressbarCatExpInter {
+    grid-area: 2 / 1 / 3 / 5;
+    background-color: rgb(170, 170, 170);
+    display: grid; /* Define o contêiner como um grid */
+    justify-items: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+
+    border: black;
+    border-radius: 0 0 10px 0 ;
+}
+.ProgressbarCatExpInterNomeCategoria {
+    grid-area: 1 / 1 / 2 / 4; /* Define a posição no grid */
+    background-color: rgb(204, 204, 204); /* Cor de fundo */
+    display: flex; /* Usando flexbox para o alinhamento */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    padding: 5px; /* Adiciona um padding de 5px ao redor do conteúdo */
+    font-weight: bold; /* Aplica o negrito ao texto */
+    color: #2c2c2c;
+
+    border: black;
+    border-radius: 10px 0 0 0 ;
+}
+
+.ProgressbarCatExpInterValores {
+    grid-area: 1/4/2/5; /* Define a posição do elemento no grid */
+    background-color: rgb(204, 204, 204); /* Cor de fundo com transparência */
+    display: flex; /* Usando flexbox para alinhar o conteúdo */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    padding: 5px; /* Padding de 5px ao redor do texto */
+    text-align: center; /* Garante que o texto fique alinhado no centro */
+}
+
+
+.CardCatP {
+    display: grid; /* Define que o layout deste elemento será um grid */
+    grid-template-rows: 1fr; /* Define uma única linha no grid, ocupando uma fração do espaço disponível */
+    grid-template-columns: 1fr; /* Define uma única coluna no grid, ocupando uma fração do espaço disponível */
+    gap: 10px; /* Define o espaçamento de 10px entre os elementos do grid */
+    width: 95%; /* Define a largura do elemento como 90% da largura do elemento pai */
+    height: 80%; /* Define a altura do elemento como 90% da altura do elemento pai */
+}
+
+.CardCatProgressbar {
+    grid-area: 1/1/2/2; /* Define a posição do elemento no grid. Isso significa que o elemento ocupará a primeira linha e a primeira coluna, com 1 linha e 1 coluna de altura/espessura */
+    background-color: rgba(171,174,49, 0.5); /* Define a cor de fundo com uma transparência de 50% */
+    display: flex; /* Usando flexbox para facilitar o alinhamento */
+    justify-content: flex-end; /* Alinha o conteúdo à esquerda */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    padding-right: 5px; /* Adiciona o padding de 5px */
+    text-align: right; /* Garante que o texto estará alinhado à esquerda */
+    border: black;
+    border-radius: 10px;
+}
+
+.arrowButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.yearButton {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #00274d; /* Fundo azul escuro */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    padding: 7px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas (opcional) */
+    cursor: default; /* Remove o estilo de "clique" do cursor */
+    text-align: center; /* Centraliza o texto */
+    outline: none; /* Remove o contorno ao foco */
+}
+
+
+.arrowButtonRight {
+    margin-left: 5px;
+}
+
+.selectedMonth {
+    background-color: #4CAF50; /* Exemplo de cor verde */
+    color: white; /* Cor do texto, caso necessário */
+    font-weight: bold; /* Opcional, para destacar o texto */
+}
+
+.LGMain03BodyContentGraficB {
+    display: grid;
+    place-items: center; /* Centraliza o conteúdo interno do item */
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%; /* Garante que o elemento tenha bordas arredondadas */
+    animation: fadeIn 1s ease-in-out; /* Efeito de entrada */
+}
+
+.LGMain03BodyContentGraficB {
+    display: grid;
+    place-items: center; /* Centraliza o conteúdo interno do item */
+    gap: 0;
+    width: 80%; /* O tamanho da grade será 80% da largura do contêiner pai */
+    aspect-ratio: 1 / 1; /* Garante que o elemento seja sempre um quadrado */
+    border-radius: 50%; /* Garante bordas arredondadas */
+    animation: fadeIn 0.8s ease-out; /* Efeito de entrada */
+}
+
+/* Estilo base do botão */
+.LGMain03BodyContentGraficButton {
+    width: 65px; /* Define o tamanho do botão como 80% da grade */
+    aspect-ratio: 1 / 1; /* Garante que o botão seja sempre um círculo */
+    background-color: #A1A1A1; /* Cor do botão */
+    border: 2px  rgba(0, 0, 0, 0.3); /* Define a borda */
+    border-radius: 50%; /* Torna o botão circular */
+
+    transition: all 0.3s ease; /* Suaviza as transições */
+    cursor: pointer; /* Indica que o elemento é clicável */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    overflow: hidden; /* Garante que nada transborde */
+}
+
+/* Estilo da imagem dentro do botão */
+.iconbuttonsLG {
+    width: 50%; /* Define o tamanho da imagem como 50% do botão */
+    height: 50%; /* Mantém proporção ao tamanho do botão */
+    object-fit: contain; /* Ajusta a imagem para caber sem distorção */
+    pointer-events: none; /* Evita que o SVG receba eventos de clique */
+}
+
+/* Efeito de hover no botão */
+.LGMain03BodyContentGraficButton:hover {
+    transform: scale(1.1); /* Cresce levemente */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Aumenta a sombra */
+    border-color: rgba(255, 255, 255, 0.5); /* Suaviza a cor da borda */
+}
+
+/* Efeito de click no botão */
+.LGMain03BodyContentGraficButton:active {
+    transform: scale(0.95); /* Reduz ligeiramente o tamanho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Diminui a sombra */
+}
+
+/* Efeito de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.LGMain03BodyContentTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo no centro horizontal */
+    justify-content: flex-end; /* Alinha o conteúdo na parte inferior */
+    height: 100%; /* Garante que o contêiner tenha 100% de altura */
+    padding-bottom: 20px; /* Ajuste o espaço inferior, conforme necessário */
+}
+
+.LGMain03BodyContentTitle div:first-child {
+    color: red; /* Torna o texto "Despesa" vermelho */
+    font-weight: bold; /* Torna o texto em negrito */
+}
+
+.LGMain03BodyContentTitle div:last-child {
+    font-size: 1.2em; /* Aumenta o tamanho da fonte para a soma dos valores */
+    font-weight: normal; /* Deixa o texto da soma mais suave */
+}
+
+.ContentProgressbarT {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.ContentProgressbarTotal {
+    grid-area: 1/1/2/2;
+    background-color: rgb(74, 138, 81);
+    border: black;
+    border-radius: 10px;
+    font-weight: bold;
+
+    /* Adiciona a animação na mudança de largura */
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+/* Exemplo de quando o progresso muda, você pode alterar o valor da largura */
+.ContentProgressbarTotal.progresso-animado {
+    width: 80%; /* Exemplo de mudança de largura */
+    background-color: rgb(34, 139, 34); /* Mudança de cor */
+}
+
+
+.noDataMessage {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+

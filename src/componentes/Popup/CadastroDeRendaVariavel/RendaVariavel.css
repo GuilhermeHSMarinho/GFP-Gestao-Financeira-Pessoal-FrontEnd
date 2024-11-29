@@ -25,7 +25,7 @@
 .input-groupRVGF {
     margin-bottom: 1rem;
     text-align: left;
-    padding-right: 15px;
+    padding-right: 35px;
 }
 
 .input-groupRVGF label {
@@ -104,3 +104,23 @@
     color: #000;
     text-align: center;
 }
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px; /* Ajuste conforme necessário */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888; /* Cor do ícone */
+    pointer-events: none; /* Garante que o clique no ícone não afete o input */
+}
+
+.input-groupRVGF input {
+    padding-left: 30px; /* Espaço para o ícone */
+}
+
+
+

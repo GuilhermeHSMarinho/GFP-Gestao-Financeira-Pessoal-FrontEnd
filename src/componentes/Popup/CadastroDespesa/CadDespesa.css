@@ -1,0 +1,218 @@
+.popupRVGF_cad-despesa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    color: #fff;
+    padding: 20px;
+}
+
+.popup-contentRVGF_cad-despesa {
+    background: #2d2d2d;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    max-width: 500px;
+    width: 100%;
+    max-height: 70vh;
+    overflow-y: auto;
+    position: relative;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    animation: popupIn 0.5s ease-out;
+    box-sizing: border-box;
+}
+
+@keyframes popupIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.closeRVGF_cad-despesa {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.input-groupRVGF_cad-despesa {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-groupRVGF_cad-despesa label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #b0b0b0;
+}
+
+.input-groupRVGF_cad-despesa input,
+.input-groupRVGF_cad-despesa select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #444;
+    background: #333;
+    border-radius: 8px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.input-groupRVGF_cad-despesa input:focus,
+.input-groupRVGF_cad-despesa select:focus {
+    background-color: #444;
+    outline: none;
+}
+
+.toggle-btn {
+    padding: 8px 16px;
+    background: #555;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #4CAF50;
+}
+
+.toggle-btn:hover {
+    background-color: #333;
+}
+
+.button-groupRVGF_cad-despesa {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-groupRVGF_cad-despesa button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.button-groupRVGF_cad-despesa button:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+}
+
+.button-groupRVGF_cad-despesa .success,
+.button-groupRVGF_cad-despesa .error {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.success {
+    color: #81c784;
+}
+
+.error {
+    color: #e57373;
+}
+
+.tags-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.tags-input input {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.add-tag-btn {
+    background: #444;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-tag-btn:hover {
+    background: #333;
+}
+
+.tags-list {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #616161;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tag:hover {
+    background-color: #757575;
+}
+
+.remove-tag-btn {
+    margin-left: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+}
+
+.remove-tag-btn:hover {
+    color: #e57373;
+}
+
+/* Estilo para a barra de rolagem */
+.popup-contentRVGF_cad-despesa::-webkit-scrollbar {
+    width: 12px;
+}
+
+.popup-contentRVGF_cad-despesa::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+.popup-contentRVGF_cad-despesa::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #3e3e3e, #555);
+    border-radius: 10px;
+    border: 3px solid #333;
+    transition: background 0.3s ease;
+}
+
+.popup-contentRVGF_cad-despesa::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #666, #444);
+}
+
+.popup-contentRVGF_cad-despesa::-webkit-scrollbar:vertical {
+    background-color: #333;
+}
+
+.popup-contentRVGF_cad-despesa::-webkit-scrollbar:horizontal {
+    display: none;
+}
